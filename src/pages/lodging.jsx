@@ -47,7 +47,7 @@ function Lodging() {
       <div className='h1-Host'>
         <div className='hostElement hostRating red-color'>
           {lodging.host.name}
-          <img src={lodging.host.picture} alt='picture lodging' className='hostPicture' />
+          <img src={lodging.host.picture} alt='lodging' className='hostPicture' />
           
         </div>
         <div className='lodgingP red-color'>

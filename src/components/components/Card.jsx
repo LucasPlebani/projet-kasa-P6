@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you are using React Router
 import "../styles/card.sass"
 
+
 function CardLodging(props) {
   const { lodging } = props; // Assuming you receive the lodging array as a prop
 

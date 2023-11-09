@@ -1,10 +1,10 @@
 import "../components/styles/collapse.scss"
 import React from "react";
-import navlink from '../components/assets/Nav-link.png'
+import Navlink from "../components/components/Navlink";
 import Collapse from "../components/components/Collapse"
 import Background_about from "../components/assets/Background_about.jpg"
 import Footer from '../components/components/Footer'
-import { Link } from 'react-router-dom'
+
 
 
 function About() {
@@ -15,15 +15,7 @@ function About() {
     const securite  = "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     return (
         <div className='about_class'>      
-                <div className='navbar-logo'>
-            <img src={navlink} alt='nav-link' className='Nav-Link' />
-                <ul className='move-navbar'>
-                    <li>
-                    <Link to='/'className='red-color navbar li-style'>  Accueil </Link>
-                        </li>
-                    <li className='red-color navbar li-under'>A propos</li>
-                </ul> 
-            </div>    
+              <Navlink />
               <div className='background_about'>
                 <img src={Background_about} alt='nav-link' className='back-about' />
              </div>  
