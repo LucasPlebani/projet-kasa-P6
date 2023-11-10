@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import Navlink from "../components/components/Navlink";
+import { useParams } from 'react-router-dom';
+import Navbar from "../components/components/Navbar";
 import Footer from "../components/components/Footer";
 import Slideshow from "../components/components/SlideshowCarousel";
 import Collapse from "../components/components/Collapse"
@@ -11,28 +11,37 @@ import "../components/styles/lodging.sass"
 
 
 function Lodging() {
-  const [searchParams] = useSearchParams();
-  const [idLogement] = useState(searchParams.get('_id'));
+  const { id } = useParams();
   const [lodging, setLodging] = useState(null);
 
   useEffect(() => {
+console.log("ID du logement (avant recherche par ID):", id);
+
+
     // Chargement JSON de manière asynchrone
     import("../data/lodging.json")
-      .then((module) => {
-        // Recherche par ID
-        const lodgingData = module.default;
-        const selectedLodging = lodgingData.find(element => element.id === idLogement);
+    
+    .then((module) => {
+      // Vérification contenu fichier json
+      const lodgingData = module.default;
+      console.log("Données JSON :", lodgingData);
+
+      //recherche par id 
+      const selectedLodging = lodgingData.find(element => element.id === id);
+      console.log("Logement sélectionné:", selectedLodging);
+        
+        // Mise à jour du state avec le logement sélectionné
         setLodging(selectedLodging);
       })
       .catch((error) => {
         console.error("Erreur de chargement du fichier JSON", error);
       });
-  }, [idLogement]);
+  }, [id]);
 
-  if (!lodging) { //si chargement trop long affichage Loading
+  if (!lodging) {
+    // si le logement est null, affichage de Loading
     return <div>Loading...</div>;
   }
-
 
   // importation Equipement + description //
   const equipements = lodging.equipments.map((element, index) => (
@@ -42,7 +51,7 @@ function Lodging() {
 
   return (
     <div className="lodgingPage">
-      <Navlink />
+      <Navbar />
       <Slideshow pictures={lodging.pictures} />
       <div className='h1-Host'>
         <div className='hostElement hostRating red-color'>

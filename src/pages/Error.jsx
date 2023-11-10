@@ -1,6 +1,6 @@
 import React from 'react'
 import '../components/styles/error.sass'
-import Navlink from '../components/components/Navlink'
+import Navbar from '../components/components/Navbar'
 import Footer from '../components/components/Footer'
 
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 export default function Error () {
     return (
         <div className='Error-page'>
-             <Navlink />
+             <Navbar />
             
             <h1 className='red-color p404 flex margin-bottom '>404</h1>
             <p className='red-color p flex margin-bottom '> Oups! la page que vous demandez n'existe pas.</p>
