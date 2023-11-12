@@ -1,98 +1,82 @@
-.collapseLodging
-    display: flex
-    margin-right : 15%
-    margin-top: 50px
-    justify-content : center
-    
+.lodgingPage  
+  max-width : 1440px
 
+.tittle 
+  margin-left : 5%
 
-.rating
-    justify-content : flex-end 
-    display : flex 
-    margin-top : -20px
-    margin-right : 3%
+.descriptionP
+  margin : 0% 25% 0% 5%
+  font-weight : 400
+  font-size : 15px
 
+.tags
+   display : flex 
+   margin : 1% 0% 0% 3%
 
-.red-color 
-    color : #FF6060
+.rating-host
+    display : flex
+    flex-direction : column-reverse
+    padding-left : 80%
+    margin-top : -172px
+    margin-bottom : 140px
 
-.lodgingP
-    margin-top : -100px
-    margin-left : 7%
-    margin-right : 7%
-
-.descriptionP 
-    font-weight : 400
-    font-size : 1.5em
-    margin-top : 5%
-    padding : 0% 10% 0% 10%
+.host-element
+    display : flex
+    align-items : center
+    padding-bottom : 80px
 
 .hostPicture 
-    border-radius : 100px
-    margin-right : 5%
-    margin-left : 2%
-    width : 7%
-    
+    border-radius : 50%
+    width : 25%
+    margin-left : 20px
 
-.hostElement
-    margin-top : 1%
+.collapseLodging
     display: flex
-    justify-content: flex-end
-    align-items: center
-    font-size : 20px
-    font-weight : 400
-    
-
-@media screen and (max-width: 1025px)
-  .h1-Host
-    padding-top : 5%
-
+    margin-right : 10%
+    margin-top: 50px
+    justify-content : center
 
 @media screen and (max-width: 768px)
+    .Comptor 
+      display : none
 
-  .lodgingP 
-    padding-top : 15%
-    
-  .Comptor 
-    display : none
+    .descriptionP
+      margin : 0% 5% 0% 5%
 
-  .hostPicture 
-    width : 20%
-    
-  .hostElement
-    position : absolute
-    top : 880px
-    left : 60%
+    .collapseLodging
+      display : contents
 
-  .rating
-    margin : 5% 47% 0% 0%
 
-  .collapseLodging
-    display: flow
-    margin: 50px 0px 0px 0px
+    .rating-host 
+      flex-direction : row
+      padding : 0px
+      margin-top : 5%
+      margin-left : 5%  
+      margin-bottom : 0%
 
-  .collapse  
-    padding-bottom: 20px 
+    .rating 
+      width : 100%
+      display : inline
+      
+    .host-element 
+      margin-top : -17px
+      margin-left : 25%
+      padding-bottom : 10%
 
-@media screen and (max-width: 620px)
-  .hostRating
-    display : inline 
-    
-@media screen and (max-width: 570px)
-  .hostElement
-    
-  .rating
-        margin-left : 5%
+    .hostname 
+      font-size : 15px
 
-@media screen and (max-width: 550px)
-  .hostElement
-     
-  .rating
-        margin-left : 5%
+    .hostPicture
+      width : 50%
+      margin-left : 2px
 
 @media screen and (max-width: 400px)
-  .hostElement
-      
-  .rating
-        margin-left : 30%
-       
+
+
+    .descriptionP
+      font-size : 10px    
+    .tittle
+      font-size : 20px
+    .hostname
+      font-size : 10px
+      margin-top : 20px

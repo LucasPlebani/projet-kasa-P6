@@ -53,23 +53,21 @@ console.log("ID du logement (avant recherche par ID):", id);
     <div className="lodgingPage">
       <Navbar />
       <Slideshow pictures={lodging.pictures} />
-      <div className='h1-Host'>
-        <div className='hostElement hostRating red-color'>
-          {lodging.host.name}
-          <img src={lodging.host.picture} alt='lodging' className='hostPicture' />
-          
-        </div>
-        <div className='lodgingP red-color'>
-          <h1>{lodging.title}</h1>
-        </div>
-      </div>
-      <h4 className='descriptionP red-color'>{lodging.description}</h4>
+      
+       
+       <h1 className='tittle red-color'>{lodging.title}</h1>
+       <h4 className='descriptionP red-color'>{lodging.description}</h4>
      
-      <div className='rating-tags'>
+     
+      <div className='tags'>
       <Tags tags={lodging.tags} />
-      <div className='rating hostRating'>
-      <Rating rating={lodging.rating} />
       </div>
+
+      <div className='rating-host red-color'>
+      <Rating rating={lodging.rating} />
+      <div className='host-element'>
+         <p className='hostname'>{lodging.host.name} </p>
+          <img src={lodging.host.picture} alt='lodging' className='hostPicture' /></div>
       </div>
 
       <div className='collapseLodging'>
