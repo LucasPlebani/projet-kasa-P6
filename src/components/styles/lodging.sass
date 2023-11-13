@@ -1,8 +1,9 @@
-.lodgingPage  
-  max-width : 1440px
 
-.tittle 
+
+.tittle
+  font-size : 30px
   margin-left : 5%
+  padding-top : 3%
 
 .descriptionP
   margin : 0% 25% 0% 5%
@@ -17,7 +18,7 @@
     display : flex
     flex-direction : column-reverse
     padding-left : 80%
-    margin-top : -172px
+    margin-top : -200px
     margin-bottom : 140px
 
 .host-element
@@ -36,16 +37,38 @@
     margin-top: 50px
     justify-content : center
 
+@media screen and (max-width: 1060px)
+
+    .tittle
+      font-size : 20px
+
+    .descriptionP
+      margin : 0% 30% 0% 5%
+      font-weight : 400
+      font-size : 12px
+
+    .rating-host
+     padding-left : 80%
+     margin-top : -170px
+     margin-bottom : 140px
+ 
+@media screen and (max-width: 917px)
+    .rating-host
+     padding-left : 80%
+     margin-top : -180px
+     margin-bottom : 140px
+
+    .host-element
+     padding-bottom : 90px
+
 @media screen and (max-width: 768px)
-    .Comptor 
-      display : none
+    
 
     .descriptionP
       margin : 0% 5% 0% 5%
 
     .collapseLodging
       display : contents
-
 
     .rating-host 
       flex-direction : row
@@ -59,8 +82,8 @@
       display : inline
       
     .host-element 
-      margin-top : -17px
-      margin-left : 25%
+      margin-top : -12px
+      padding-right : 10%
       padding-bottom : 10%
 
     .hostname 
@@ -69,6 +92,9 @@
     .hostPicture
       width : 50%
       margin-left : 2px
+
+
+
 
 @media screen and (max-width: 400px)
 

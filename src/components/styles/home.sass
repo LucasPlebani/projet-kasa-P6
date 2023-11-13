@@ -1,21 +1,22 @@
 .Home-page 
-    max-width : 1440px 
+    
+    margin : auto
 
 #gallery
-    margin : 5% 5% 0% 5%
+    
+    margin : 5%
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
     grid-column-gap: 20px
     grid-row-gap: 50px
-    justify-content: center
     background: #F6F6F6
     padding-top: 5%
     padding-bottom : 75px 
     
-.back-home 
-    margin : 8% 4% 0% 4%
-    position : relative
     
+.back-home 
+    position : relative
+    margin : 5%
     
 .background-top
     width : 100%
@@ -24,6 +25,7 @@
     border-radius : 20px
     justify-content : center
     filter: brightness(70%)
+    margin : 2% 0% 2% 0%
     
 .white-color 
     color : white
@@ -32,26 +34,32 @@
 .text-over
   position: absolute
   font-size: 48px
-  top :10%
-  left : 30%
-  transform: translate(-10%, -30%)
+  top :20%
+  left : 40%
+  transform: translate(-20%, -40%)
   
 
-@media screen and (max-width: 1440px)
-  #gallery
-    padding-right : 3%
 
 
+@media screen and (max-width: 1200px)
+  
+  .text-over
+    position: absolute
+    font-size: 35px
+    top :25%
+    left : 40%
+    transform: translate(-25%, -30%)
+  
 @media screen and (max-width: 825px)
-  #gallery
-    padding-right : 3%
+  
 
   .move-navbar
     margin-left : 10%
 
 @media screen and (max-width: 768px)
-  .text-over
-    font-size: 36px
-  
   #gallery
-    padding-right : 8%
+    background : none
+  .text-over
+    font-size: 30px
+  
+ 

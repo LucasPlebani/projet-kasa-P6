@@ -34,19 +34,25 @@ function Slideshow({ pictures }) {
   
     return (
       <div className='Slideshow'>
-        <div className='displayPicture'>
-          <img src={pictures[index]} className='imageView' key={"slide" + index} />
-          <button className='hiddenbtn' onClick={prevView}>
-            <img src={ArrowLeft} className='ArrowLeftPict buttonCarousel' alt='flèche de gauche' />
-          </button>
-          <button className='hiddenbtn' onClick={nextView}>
-            <img src={ArrowRight} className='ArrowRightPict buttonCarousel' alt='flèche de droite' />
-          </button>
-        </div>
+      <div className='displayPicture'>
+        <img src={pictures[index]} alt={`Slide ${index + 1}`} className='imageView' key={"slide" + index} />
+        {viewPictures > 1 && (
+          <>
+            <button className='hiddenbtn' onClick={prevView}>
+              <img src={ArrowLeft} className='ArrowLeftPict buttonCarousel' alt='flèche de gauche' />
+            </button>
+            <button className='hiddenbtn' onClick={nextView}>
+              <img src={ArrowRight} className='ArrowRightPict buttonCarousel' alt='flèche de droite' />
+            </button>
+          </>
+        )}
+      </div>
+      {viewPictures > 1 && (
         <div className='Comptor'>
           {index + 1}/{viewPictures}
         </div>
-      </div>
+      )}
+    </div>
   );
   
   }
