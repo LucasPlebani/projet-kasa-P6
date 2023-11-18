@@ -17,11 +17,12 @@
 
 }
 .collapse { 
-    padding-bottom : 10px;
+    padding-bottom : 30px;
     width: 80%;
     justify-content: center;
     margin-left : 10%;
-}
+    margin-bottom: 20px;
+}   
 .open{
     background-color: #F6F6F6;
     border-radius: 10px;
@@ -35,6 +36,7 @@
     padding: 10px 20px 10px 15px;
     background-color: #FF6060;
     border-radius: 10px;
+    
 
     @media (max-width : 425px){
         font-size:12px;
@@ -62,7 +64,7 @@
         transition: transform 300ms ease-out;
         
         &--open{
-            transform: rotate(180deg);
+            transform: rotate(-180deg);
             transition: transform 300ms ease-out;
         }
     }
@@ -95,4 +97,5 @@
     overflow: visible;
     padding: 20px;
     opacity: 1;
+    
 }

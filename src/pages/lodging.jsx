@@ -62,22 +62,22 @@ function Lodging() {
       <Navbar />
       <Slideshow pictures={lodging.pictures} />
       
-       
+      <div className='grid-element'>
        <h1 className='tittle red-color'>{lodging.title}</h1>
-       <h4 className='descriptionP red-color'>{lodging.description}</h4>
+       <h4 className='location red-color'>{lodging.location}</h4>
      
      
       <div className='tags'>
       <Tags tags={lodging.tags} />
       </div>
 
-      <div className='rating-host red-color'>
+      
       <Rating rating={lodging.rating} />
       <div className='host-element'>
          <p className='hostname'>{lodging.host.name} </p>
           <img src={lodging.host.picture} alt='lodging' className='hostPicture' /></div>
-      </div>
-
+      
+    </div>
       <div className='collapseLodging'>
         <Collapse title="Description" content={lodging.description} label="description" />
         <Collapse title="Equipements" content={equipements} className='collapseEquipement' label="equipements"/>
